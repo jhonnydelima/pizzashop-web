@@ -28,6 +28,7 @@ export function OrderStatus({ status }: OrderStatusProps) {
   return (
     <div className="flex items-center gap-2">
       <span
+        data-testid="badge"
         className={cn('h-2 w-2 rounded-full', orderStatusMap[status].color)}
       />
 
