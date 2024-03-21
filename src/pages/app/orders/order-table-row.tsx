@@ -161,7 +161,7 @@ export function OrderTableRow({ order }: OrderTableRowProps) {
       </TableCell>
 
       <TableCell>
-        {!(order.status === 'delivered') && (
+        {!(order.status === 'delivered' || order.status === 'canceled') && (
           <Button
             disabled={
               !['pending', 'processing'].includes(order.status) ||
